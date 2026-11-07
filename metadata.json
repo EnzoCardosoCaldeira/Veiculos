@@ -1,0 +1,6 @@
+{
+  "name": "VORTEX DYNAMICS - Veículos & Máquinas",
+  "description": "Plataforma premium para exploração do mercado de carros esportivos, motocicletas, caminhões pesados, embarcações e tanques militares.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
