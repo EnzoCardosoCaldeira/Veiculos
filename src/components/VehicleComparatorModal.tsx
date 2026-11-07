@@ -105,6 +105,9 @@ export const VehicleComparatorModal: React.FC<VehicleComparatorModalProps> = ({
                           src={v.image}
                           alt={v.name}
                           referrerPolicy="no-referrer"
+                          onError={(e) => {
+                            e.currentTarget.src = '/images/hero-hypercar.jpg';
+                          }}
                           className="w-full h-full object-cover"
                         />
                       </div>

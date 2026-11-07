@@ -145,6 +145,16 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
                   src={galleryImages[activeImageIndex] || vehicle.image}
                   alt={vehicle.name}
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    const fallbacks: Record<string, string> = {
+                      carros: '/images/car-supercar.jpg',
+                      motos: '/images/moto-superbike.jpg',
+                      caminhoes: '/images/truck-heavy.jpg',
+                      barcos: '/images/boat-yacht.jpg',
+                      tanques: '/images/tank-tactical.jpg',
+                    };
+                    e.currentTarget.src = fallbacks[vehicle.category] || '/images/hero-hypercar.jpg';
+                  }}
                   className="w-full h-full object-cover object-center filter brightness-[0.92]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />

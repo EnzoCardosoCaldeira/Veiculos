@@ -176,6 +176,9 @@ export const PriceAlertModal: React.FC<PriceAlertModalProps> = ({
                   src={vehicle.image}
                   alt={vehicle.name}
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    e.currentTarget.src = '/images/hero-hypercar.jpg';
+                  }}
                   className="w-16 h-12 rounded-lg object-cover"
                 />
                 <div className="min-w-0 flex-1">

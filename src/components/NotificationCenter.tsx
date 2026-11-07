@@ -188,6 +188,9 @@ export const NotificationCenter: React.FC<NotificationCenterProps> = ({
                       src={item.vehicleImage}
                       alt={item.vehicleName}
                       referrerPolicy="no-referrer"
+                      onError={(e) => {
+                        e.currentTarget.src = '/images/hero-hypercar.jpg';
+                      }}
                       className="w-14 h-14 rounded-lg object-cover bg-black shrink-0 border border-[#262638]"
                     />
 
@@ -259,6 +262,9 @@ export const NotificationCenter: React.FC<NotificationCenterProps> = ({
                       src={alert.vehicleImage}
                       alt={alert.vehicleName}
                       referrerPolicy="no-referrer"
+                      onError={(e) => {
+                        e.currentTarget.src = '/images/hero-hypercar.jpg';
+                      }}
                       className="w-14 h-14 rounded-lg object-cover bg-black shrink-0 border border-[#262638]"
                     />
 

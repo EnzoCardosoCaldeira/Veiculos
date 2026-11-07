@@ -9,6 +9,7 @@ import {
   TrendingUp
 } from 'lucide-react';
 import { VehicleCategory } from '../types/vehicle';
+import heroHypercar from '../assets/images/hero_apex_hypercar_1794059188468.jpg';
 
 interface HeroSectionProps {
   onExploreCatalog: () => void;
@@ -26,9 +27,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       {/* Background Image with Measured Contrast Scrim */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/hero_apex_hypercar_1794059188468.jpg"
+          src={heroHypercar}
           alt="Apex Hypercar em showroom escuro com detalhes em fibra de carbono"
           referrerPolicy="no-referrer"
+          onError={(e) => {
+            e.currentTarget.src = '/images/hero-hypercar.jpg';
+          }}
           className="w-full h-full object-cover object-center filter brightness-[0.72] contrast-[1.12]"
         />
         {/* Gradient Scrims: Dark Vignette, Top Navbar Fade, Bottom Content Blend */}

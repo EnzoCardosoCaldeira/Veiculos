@@ -33,6 +33,16 @@ export const CategoryHeroBanner: React.FC<CategoryHeroBannerProps> = ({
           src={meta.image}
           alt={meta.title}
           referrerPolicy="no-referrer"
+          onError={(e) => {
+            const fallbacks: Record<string, string> = {
+              carros: '/images/car-supercar.jpg',
+              motos: '/images/moto-superbike.jpg',
+              caminhoes: '/images/truck-heavy.jpg',
+              barcos: '/images/boat-yacht.jpg',
+              tanques: '/images/tank-tactical.jpg',
+            };
+            e.currentTarget.src = fallbacks[category] || '/images/hero-hypercar.jpg';
+          }}
           className="w-full h-full object-cover object-center filter brightness-90"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0E] via-[#0A0A0E]/80 to-[#0A0A0E]/60" />

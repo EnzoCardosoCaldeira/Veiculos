@@ -21,6 +21,7 @@ import { PriceAlertModal } from './components/PriceAlertModal';
 import { NotificationCenter } from './components/NotificationCenter';
 import { ToastNotification } from './components/ToastNotification';
 import { Footer } from './components/Footer';
+import heroHypercar from './assets/images/hero_apex_hypercar_1794059188468.jpg';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<'home' | VehicleCategory | 'catalogo' | 'mercado'>('home');
@@ -59,7 +60,7 @@ export default function App() {
           id: 'alert-sample-1',
           vehicleId: 'car-sf90-stradale',
           vehicleName: 'Ferrari SF90 Stradale Carbon',
-          vehicleImage: '/src/assets/images/hero_apex_hypercar_1794059188468.jpg',
+          vehicleImage: heroHypercar,
           currentPrice: 7400000,
           targetPrice: 7030000,
           email: 'investidor@vortex.com',
@@ -82,7 +83,7 @@ export default function App() {
           id: 'notif-sample-1',
           vehicleId: 'car-sf90-stradale',
           vehicleName: 'Ferrari SF90 Stradale Carbon',
-          vehicleImage: '/src/assets/images/hero_apex_hypercar_1794059188468.jpg',
+          vehicleImage: heroHypercar,
           oldPrice: 7400000,
           newPrice: 6990000,
           discountPercentage: 5.5,

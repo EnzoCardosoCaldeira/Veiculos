@@ -96,7 +96,7 @@ describe('Price Alert Logic Suite', () => {
       const notif = createPriceDropNotification(
         'car-sf90-stradale',
         'Ferrari SF90 Stradale Carbon',
-        '/src/assets/images/hero_apex_hypercar_1794059188468.jpg',
+        '/images/hero-hypercar.jpg',
         10000000,
         9000000
       );

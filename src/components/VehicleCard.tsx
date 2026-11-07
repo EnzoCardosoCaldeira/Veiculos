@@ -48,6 +48,16 @@ export const VehicleCard: React.FC<VehicleCardProps> = ({
           src={vehicle.image}
           alt={vehicle.name}
           referrerPolicy="no-referrer"
+          onError={(e) => {
+            const fallbacks: Record<string, string> = {
+              carros: '/images/car-supercar.jpg',
+              motos: '/images/moto-superbike.jpg',
+              caminhoes: '/images/truck-heavy.jpg',
+              barcos: '/images/boat-yacht.jpg',
+              tanques: '/images/tank-tactical.jpg',
+            };
+            e.currentTarget.src = fallbacks[vehicle.category] || '/images/hero-hypercar.jpg';
+          }}
           className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[0.88]"
         />
         {/* Soft dark gradient at bottom of image */}

@@ -50,6 +50,9 @@ export const ToastNotification: React.FC<ToastNotificationProps> = ({
                 src={notif.vehicleImage}
                 alt={notif.vehicleName}
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  e.currentTarget.src = '/images/hero-hypercar.jpg';
+                }}
                 className="w-full h-full object-cover"
               />
               <span className="absolute bottom-0 right-0 bg-[#E50914] p-0.5 rounded-tl text-white">

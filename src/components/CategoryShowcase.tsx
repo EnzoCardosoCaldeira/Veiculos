@@ -60,6 +60,16 @@ export const CategoryShowcase: React.FC<CategoryShowcaseProps> = ({
                     src={cat.image}
                     alt={cat.title}
                     referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      const fallbacks: Record<string, string> = {
+                        carros: '/images/car-supercar.jpg',
+                        motos: '/images/moto-superbike.jpg',
+                        caminhoes: '/images/truck-heavy.jpg',
+                        barcos: '/images/boat-yacht.jpg',
+                        tanques: '/images/tank-tactical.jpg',
+                      };
+                      e.currentTarget.src = fallbacks[cat.id] || '/images/hero-hypercar.jpg';
+                    }}
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[0.78]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#111116] via-[#111116]/40 to-transparent" />
